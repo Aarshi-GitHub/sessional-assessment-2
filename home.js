@@ -22,11 +22,13 @@ xhr.onreadystatechange=()=>{
         let output = '';
         for(let i=0;i<response.length;i++){
             let email = `mailto:${response[i].email}`;
-        output+=`<div style="width:200px;height:200px;margin:20px;background-color:white;display:flex;flex-direction:column;padding-top:5px;align-items:center;">
+            let user_name=`username:${response[i].username}`
+        output+=`<div style="width:200px;height:200px;margin:15px;background-color:white;display:flex;justify-content:space-between;flex-direction:column;padding-top:5px;align-items:center;">
         <div>
             <img src="${arr[i]}" height=100px width=100px/>
         </div><br><b>${response[i].name}</b><br>
-        <div><a href=${email} style="color:navy"><i class="fa-solid fa-message"></i></a>
+        <div><a href=${email} ><i class="fa-solid fa-message" style="color:navy"></i></a> <i style="color:navy" 
+        title = ${user_name} class="fa-solid fa-circle-info"></i>
         </div>
         </div>`
         document.querySelector("#display").innerHTML = output;
