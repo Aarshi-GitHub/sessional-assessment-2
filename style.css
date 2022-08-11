@@ -17,22 +17,82 @@
     left: 0%;
     background-color: rgb(101, 1, 150);
     padding-left: 1vw;
-    padding-top: 0.6vh;
+    padding-top: 1vh;
     color: white;
 }
 
-#sideBar ul li a{
-    color:white;
-}
-
 #sideBar ul li{
+    padding:1vh 1vh;
     margin-top: 5vh;
 }
 
 #mainContent{
+    position: fixed;
+    top: 0%;
+    width:78vw;
+    margin-left: 20.2vw;
+}
+footer{
+    background-color: rgba(0, 0, 0, 0.226);
+    position: fixed;
+    bottom:0.5%;
+    width:78vw;
+    height:8vh;
     margin-left: 20.2vw;
 }
 
 #mainContent header h1{
     color:rgb(101, 1, 150);
 }
+
+#sideBar ul li:hover{
+    background-color: white;
+    color:rgb(101, 1, 150);
+    border: 2px solid white;
+    border-radius: 15%;
+}
+.sideMenu ul li{
+    font-size:1.1rem;
+}
+.sideMenu ul li i{
+    margin-right: 3px;
+}
+
+#responsive{
+    visibility:hidden;
+}
+
+footer i{
+	color: white;
+	padding:1%;
+	border-radius: 50%;
+	vertical-align: top;
+}
+
+footer i:hover{
+	color: black;
+	box-shadow: 0px 0px 3px 3px white;
+}
+
+
+@media screen and (max-width: 700px) {
+    #responsive{
+        visibility:visible;
+    }
+    #sideBar{
+        width:50px;
+    }
+    .hide{
+        visibility:hidden;
+    }
+    #mainContent{
+        margin-left:50px;
+    }
+    footer{
+        margin-left: 50px;
+    }
+    #respDiv{
+        height:53vh;
+    }
+
+  }
