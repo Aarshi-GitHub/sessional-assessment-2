@@ -32,18 +32,22 @@
             padding-left: 1%;
             font-weight: bold;
         }
+        @media screen and (max-width: 700px) {
+            input{ width:80%;}
+            select{width:80%;margin-bottom:10px;}
+  }
     </style>
 </head>
 <body>
-    <div>
+    <div class="container-fluid">
     <form>
         <h4> Search by : </h4>
-        <select>
-            <option value="id">Id</option>
+        <select class="form-select" size="4" aria-label="size 3 select example">
+            <option value="id">ID</option>
             <option value="name">Name</option>
             <option value="username">UserName</option>
             <option value="website">Website</option>
-        </select>
+          </select>
         <input type="text" placeholder=" Type Here ......">
          <i id="searchButton" style="color:rgb(101, 1, 150);" class="fa-solid fa-lg fa-magnifying-glass"></i>
     </form>
